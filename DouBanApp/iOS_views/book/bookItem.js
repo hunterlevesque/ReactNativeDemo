@@ -9,7 +9,8 @@ import {
     View,
     Text,
     Image,
-    TouchableHighlight,
+    TouchableOpacity,
+    StyleSheet,
 } from 'react-native';
 
 class bookList extends Component {
@@ -23,6 +24,7 @@ class bookList extends Component {
     render() {
         var row = this.props.row;
         return (
+            <TouchableOpacity style={[styles.row, styles.item]} {...this.props}>
             <View style={{ height:120, flexDirection: 'row'}} >
                 <Image source={{uri:row.image}}
                 style={{width:80 ,
@@ -41,8 +43,22 @@ class bookList extends Component {
                 </View>
 
             </View>
+        </TouchableOpacity>
         );
     }
 }
+
+
+var styles = StyleSheet.create({
+    row:{
+        flexDirection:'row'
+    },
+    item:{
+        height:120,
+        marginTop:5,
+        marginBottom:5,
+        borderColor:'#ccc'
+    },
+});
 
 module.exports = bookList;

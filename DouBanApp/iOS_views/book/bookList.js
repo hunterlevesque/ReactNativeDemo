@@ -5,7 +5,7 @@
 import BookItem from './bookItem';
 import Service from './../common/service';
 import Util from './../common/util';
-
+import BookDetail from './bookDetail';
 
 import React, {
     Component,
@@ -36,7 +36,9 @@ module.exports = React.createClass({
                 this.state.show ?
             <ListView
                 dataSource={this.state.dataSource}
-                renderRow={(rowData) => <BookItem row={rowData} />}/>: Util.loading
+                renderRow={(rowData) => <BookItem row={rowData}
+                    onPress={this._loadPage.bind(this, rowData.id)}
+                    />}/>: Util.loading
 
             }
 
@@ -69,6 +71,17 @@ module.exports = React.createClass({
          }
      })
      .done();
+
+
+    },
+
+    _loadPage(id){
+        this.props.navigator.push({
+            component: BookDetail,
+            passProps:{
+                id: id
+            }
+        });
     },
 
 });

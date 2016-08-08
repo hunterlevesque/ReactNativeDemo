@@ -3,6 +3,8 @@
 import BookList from './iOS_views/book/bookList';
 import MovieList from './iOS_views/movie/movieList';
 import MusicList from './iOS_views/music/musicList';
+import Navigation from './iOS_views/common/navigation';
+
 import React, {
   Component,
 } from 'react';
@@ -30,13 +32,13 @@ class DouBanApp extends Component {
     return (
       <TabBarIOS>
         <TabBarIOS.Item title='书' icon={require('./source/book.png')} selected={this.state.selectedTab === '书'} onPress={()=>{this.setState({selectedTab: '书'})}}>
-            <BookList />
+            <Navigation component={BookList} />
         </TabBarIOS.Item>
         <TabBarIOS.Item title='电影' icon={require('./source/movie.png')} selected={this.state.selectedTab === '电影'} onPress={()=>{this.setState({selectedTab: '电影'})}}>
-           <MovieList />
+            <Navigation component={MovieList} />
          </TabBarIOS.Item>
         <TabBarIOS.Item title='音乐' icon={require('./source/music.png')} selected={this.state.selectedTab === '音乐'} onPress={()=>{this.setState({selectedTab: '音乐'})}}>
-          <MusicList />
+              <Navigation component={MusicList} />
         </TabBarIOS.Item>
       </TabBarIOS>
     );
