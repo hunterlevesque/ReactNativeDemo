@@ -1,5 +1,7 @@
 # ReactNative
-相关问题的分析										
+【React-Dou】(https://github.com/vczero/React-Dou)
+相关问题的分析	
+								
 ####1.onlyChild must be passed children with exactly one child
 这个问题其实就是一个组件需要的属性或者子组件没有设置
 
