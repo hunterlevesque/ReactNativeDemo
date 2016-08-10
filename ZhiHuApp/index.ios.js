@@ -4,6 +4,8 @@
  * @flow
  */
 import HomeList from './views/home/homeList';
+import DayNewsList from './views/dayNews/dayNewsList';
+import ColumnList from './views/column/columnList';
 import Navigation from './views/common/navigation';
 
 import React, {
@@ -34,11 +36,11 @@ class ZhiHuApp extends Component {
         </TabBarIOS.Item>
         <TabBarIOS.Item title='日报' selected={this.state.selectedTab === '日报'}
          onPress={()=>{this.setState({selectedTab: '日报'})}}>
-            <View style={{backgroundColor:'gray', flex: 1}}></View>
+            <Navigation component={DayNewsList} />
          </TabBarIOS.Item>
         <TabBarIOS.Item title='栏目' selected={this.state.selectedTab === '栏目'} 
         onPress={()=>{this.setState({selectedTab: '栏目'})}}>
-             <View style={{backgroundColor:'gray', flex: 1}}></View>
+             <Navigation component={ColumnList} />
         </TabBarIOS.Item>
       </TabBarIOS>
     );

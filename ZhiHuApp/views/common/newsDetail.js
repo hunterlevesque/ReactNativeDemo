@@ -11,13 +11,11 @@ class NewsDetail extends Component {
 
 	render() {
 		var url = 'http://news-at.zhihu.com/api/4/news/' + this.props.id;
-		alert(url);
 		return (
-
 			<WebView
-        	source={{uri: url}}
-        	style={{marginTop: 20}}
-      />
+        	 source={{uri: url}}
+        	 style={{marginTop: 20}}
+      		/>
 		);
 	}
 
