@@ -1,5 +1,4 @@
 # ReactNative
-DouBanApp这个Demo借鉴了React-Dou项目，感谢作者开源分享 [React-Dou的地址](https://github.com/vczero/React-Dou)
 
 
 ###相关问题的分析	
