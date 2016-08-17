@@ -24,7 +24,9 @@
     }
 });
 
-####3.当我们创建组件，有两种方法，一种是React.createClass({}），还有一种是class DouBanApp extends Component，这两种需要注意：初始化state等属性的时候是不一样的
+####3.当我们创建组件，有两种方法，一种是React.createClass({}），还有一种是class DouBanApp extends Component，这两种需要注意：
+||初始化state等属性的时候是不一样的
+
 
 	React.createClass({
 		getInitialState() {	}
